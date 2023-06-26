@@ -10,14 +10,29 @@ body {
 }
 h1{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: palevioletred;
+    font-size: 48px;
+    text-align: center;
+    text-decoration: underline;
 }
+h3 {
+    font-size: 20px;
+    color: black;
+    text-decoration: underline;
+  }
+p {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration-color: black;
+  }
 form {
     margin-bottom: 20px;
 }
 
 label {
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 
 input[type="number"],
@@ -27,6 +42,12 @@ select {
 
 button {
     padding: 10px 20px;
+    font-weight: bold;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: rgb(170, 49, 70);
+    border: none;
+    border-radius: 5px;
 }
 
 output {
@@ -45,10 +66,12 @@ output {
 #resultado {
     font-weight: bold;
     font-size: 24px;
-    color: #ff0000;
-    padding: 10px;
-    border: 2px solid #ff0000;
+    color:  rgb(170, 49, 70);
+    padding: 20px; /* Aumente o valor de padding para aumentar o tamanho do quadrado */
+    border: 2px solid #000000; /* Altere a cor da borda para #000000 para torná-la preta */
     background-color: #f9f9f9;
     display: inline-block;
     box-sizing: border-box;
+    width: 300px;
+    background-color: #f2f2f2;
 }

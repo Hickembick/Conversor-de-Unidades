@@ -1,29 +1,29 @@
-// Mapeamento das unidades de medida por categoria
+// unidades de medida por categoria
 const unidadesMedida = {
   comprimento: ["metros", "centímetros", "polegadas"],
   peso: ["quilogramas", "gramas", "libras"],
   temperatura: ["Celsius", "Fahrenheit", "Kelvin"]
 };
 
-// Função para atualizar as opções de unidade de medida de origem e destino
+// função para atualizar as opções de unidade de medida
 function atualizarUnidades() {
   const categoria = document.getElementById("categoria").value;
   const unidadesOrigem = unidadesMedida[categoria];
   const unidadesOrigemSelect = document.getElementById("unidadeOrigem");
   const unidadesDestinoSelect = document.getElementById("unidadeDestino");
 
-  // Limpar as opções de unidade de medida de origem e destino
+  // Limpar as opções de unidade de medida dos dois campos
   unidadesOrigemSelect.innerHTML = "";
   unidadesDestinoSelect.innerHTML = "";
 
-  // Adicionar as opções de unidade de medida de origem
+  // adicionar as opções de unidade de medida
   for (let i = 0; i < unidadesOrigem.length; i++) {
     const option = document.createElement("option");
     option.text = unidadesOrigem[i];
     unidadesOrigemSelect.add(option);
   }
 
-  // Adicionar as opções de unidade de medida de destino
+  // adicionar as opções de unidade de medida de destino
   for (let i = 0; i < unidadesOrigem.length; i++) {
     const option = document.createElement("option");
     option.text = unidadesOrigem[i];
@@ -31,7 +31,7 @@ function atualizarUnidades() {
   }
 }
 
-// Função para realizar a conversão de comprimento
+// função para realizar a conversão comprimento
 function converterComprimento(valor, unidadeOrigem, unidadeDestino) {
   switch (unidadeOrigem) {
     case "metros":
@@ -65,10 +65,10 @@ function converterComprimento(valor, unidadeOrigem, unidadeDestino) {
       }
       break;
   }
-  return 0; // Valor padrão caso a conversão não seja possível
+  return 0;
 }
 
-// Função para realizar a conversão de peso
+// função para realizar a conversão - peso
 function converterPeso(valor, unidadeOrigem, unidadeDestino) {
   switch (unidadeOrigem) {
     case "quilogramas":
@@ -102,10 +102,10 @@ function converterPeso(valor, unidadeOrigem, unidadeDestino) {
       }
       break;
   }
-  return 0; // valor caso a conversão não seja possível
+  return 0;
 }
 
-// Função para realizar a conversão de temperatura
+// função para realizar a conversão - temperatura
 function converterTemperatura(valor, unidadeOrigem, unidadeDestino) {
   switch (unidadeOrigem) {
     case "Celsius":
@@ -139,17 +139,17 @@ function converterTemperatura(valor, unidadeOrigem, unidadeDestino) {
       }
       break;
   }
-  return 0; // Valor padrão caso a conversão não seja calculada
+  return 0;
 }
 
-// Função para realizar a conversão
+// função para realizar a conversão
 function converter() {
   const valor = parseFloat(document.getElementById("valor").value);
   const unidadeOrigem = document.getElementById("unidadeOrigem").value;
   const unidadeDestino = document.getElementById("unidadeDestino").value;
   let resultado;
 
-  // Realizar a conversão com base na categoria selecionada
+  // fazer a conversão com base na categoria selecionada anteriomente
   const categoria = document.getElementById("categoria").value;
   switch (categoria) {
     case "comprimento":
@@ -163,9 +163,9 @@ function converter() {
       break;
   }
 
-  // Exibir o resultado da conversão
+  // exibir o resultado
   document.getElementById("resultado").textContent = resultado.toFixed(2);
 }
 
-// Atualizar as opções de unidade de medida de origem e destino ao carregar a página
+// atualizar as opções ao carregar a página
 window.onload = atualizarUnidades;
