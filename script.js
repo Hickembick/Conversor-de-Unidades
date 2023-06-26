@@ -1,5 +1,5 @@
 // unidades de medida por categoria
-const unidadesMedida = {
+var unidadesMedida = {
   comprimento: ["metros", "centímetros", "polegadas"],
   peso: ["quilogramas", "gramas", "libras"],
   temperatura: ["Celsius", "Fahrenheit", "Kelvin"]
@@ -7,25 +7,25 @@ const unidadesMedida = {
 
 // função para atualizar as opções de unidade de medida
 function atualizarUnidades() {
-  const categoria = document.getElementById("categoria").value;
-  const unidadesOrigem = unidadesMedida[categoria];
-  const unidadesOrigemSelect = document.getElementById("unidadeOrigem");
-  const unidadesDestinoSelect = document.getElementById("unidadeDestino");
+  var categoria = document.getElementById("categoria").value;
+  var unidadesOrigem = unidadesMedida[categoria];
+  var unidadesOrigemSelect = document.getElementById("unidadeOrigem");
+  var unidadesDestinoSelect = document.getElementById("unidadeDestino");
 
   // Limpar as opções de unidade de medida dos dois campos
   unidadesOrigemSelect.innerHTML = "";
   unidadesDestinoSelect.innerHTML = "";
 
   // adicionar as opções de unidade de medida
-  for (let i = 0; i < unidadesOrigem.length; i++) {
-    const option = document.createElement("option");
+  for (var i = 0; i < unidadesOrigem.length; i++) {
+    var option = document.createElement("option");
     option.text = unidadesOrigem[i];
     unidadesOrigemSelect.add(option);
   }
 
   // adicionar as opções de unidade de medida de destino
-  for (let i = 0; i < unidadesOrigem.length; i++) {
-    const option = document.createElement("option");
+  for (var i = 0; i < unidadesOrigem.length; i++) {
+    var option = document.createElement("option");
     option.text = unidadesOrigem[i];
     unidadesDestinoSelect.add(option);
   }
@@ -144,13 +144,13 @@ function converterTemperatura(valor, unidadeOrigem, unidadeDestino) {
 
 // função para realizar a conversão
 function converter() {
-  const valor = parseFloat(document.getElementById("valor").value);
-  const unidadeOrigem = document.getElementById("unidadeOrigem").value;
-  const unidadeDestino = document.getElementById("unidadeDestino").value;
-  let resultado;
+  var valor = parseFloat(document.getElementById("valor").value);
+  var unidadeOrigem = document.getElementById("unidadeOrigem").value;
+  var unidadeDestino = document.getElementById("unidadeDestino").value;
+  var resultado;
 
   // fazer a conversão com base na categoria selecionada anteriomente
-  const categoria = document.getElementById("categoria").value;
+  var categoria = document.getElementById("categoria").value;
   switch (categoria) {
     case "comprimento":
       resultado = converterComprimento(valor, unidadeOrigem, unidadeDestino);
