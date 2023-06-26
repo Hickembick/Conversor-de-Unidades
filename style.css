@@ -1,0 +1,54 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-image: url("Img/calculadora.jpg");
+    background-repeat: repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+h1{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+form {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="number"],
+select {
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 10px 20px;
+}
+
+output {
+    font-weight: bold;
+}
+
+.container {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    max-width: 4000px;
+    padding: 200px;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+}
+#resultado {
+    font-weight: bold;
+    font-size: 24px;
+    color: #ff0000;
+    padding: 10px;
+    border: 2px solid #ff0000;
+    background-color: #f9f9f9;
+    display: inline-block;
+    box-sizing: border-box;
+}
