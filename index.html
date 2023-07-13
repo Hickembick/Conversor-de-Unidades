@@ -12,12 +12,14 @@
   <main class="container">
     <h1>Conversor de Unidades</h1>
     <form id="converterForm">
-      <label for="valor">
+      <label for="valor" class="label-valor">
         <h3>Valor:</h3>
       </label>
+      <div class="input-wrapper">
       <input type="number" id="valor" required>
       <label for="categoria">
-        <p>Categoria:</p>
+      </div>
+        <p>Categorias:</p>
       </label>
       <select id="categoria" onchange="atualizarUnidades()">
         <option value="comprimento">Comprimento</option>
@@ -41,13 +43,8 @@
       <div class="button-container">
         <button type="button" onclick="converter()">Converter</button>
       </div>
+        <div class="resultado-out hidden" id="resultado"></div>
     </form>
-    <div>
-      <label>
-        <h3>Resultado:</h3>
-      </label>
-      <output id="resultado"></output>
-    </div>
   </main>
   <script src="/js/script.js"></script>
 </body>
