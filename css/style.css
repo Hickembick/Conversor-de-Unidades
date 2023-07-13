@@ -9,8 +9,6 @@ body {
   height: 100vh;
 }
 
-
-
 h1 {
   font-family: 'Roboto', Arial, sans-serif;
   color: palevioletred;
@@ -80,6 +78,8 @@ button {
 }
 
 .resultado-out {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 50px;
   font-weight: bold;
   text-align: center;
   margin-top: 20px;
@@ -150,10 +150,6 @@ button {
 .button-container button:hover {
   background-color: #45a049;
 }
-
-/* #resultado {
-
-} */
 
 .label-valor {
   display: flex;
