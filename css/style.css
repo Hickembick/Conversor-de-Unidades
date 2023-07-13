@@ -1,46 +1,52 @@
 body {
     font-family: Arial, sans-serif;
-    padding: 20px;
-    background-image: url("Img/calculadora.jpg");
+    padding: 2px;
+    background-image: url("/Img/calculadora.jpg");
     background-repeat: repeat;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-}
-h1{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  
+  h1 {
+    font-family: 'Roboto', Arial, sans-serif;
     color: palevioletred;
     font-size: 48px;
     text-align: center;
     text-decoration: underline;
-}
-h3 {
+  }
+  
+  h3 {
+    font-family: 'Roboto', Arial, sans-serif;
     font-size: 20px;
     color: black;
     text-decoration: underline;
   }
-p {
-    font-size: 24px;
+  
+  p {
+    font-size: 14px;
     font-weight: bold;
     text-align: center;
     text-decoration-color: black;
   }
-form {
+  
+  form {
     margin-bottom: 20px;
-}
-
-label {
+  }
+  
+  label {
     display: block;
     margin-bottom: 10px;
-}
-
-input[type="number"],
-select {
+    font-weight: bold;
+  }
+  
+  input[type="number"],
+  select {
     margin-bottom: 10px;
-}
-
-button {
+  }
+  
+  button {
     padding: 10px 20px;
     font-weight: bold;
     font-size: 16px;
@@ -48,13 +54,23 @@ button {
     background-color: rgb(170, 49, 70);
     border: none;
     border-radius: 5px;
-}
-
-output {
+  }
+  
+  output {
     font-weight: bold;
-}
-
-.container {
+  }
+  
+  .escolherunidade {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .unidade-wrapper {
+    margin-right: 20px;
+    font-size: 10px;
+  }
+  
+  .container {
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -62,16 +78,29 @@ output {
     padding: 200px;
     background-color: #f2f2f2;
     border-radius: 5px;
-}
-#resultado {
+  }
+  
+  #resultado {
     font-weight: bold;
     font-size: 24px;
-    color:  rgb(170, 49, 70);
-    padding: 20px; /* Aumente o valor de padding para aumentar o tamanho do quadrado */
-    border: 2px solid #000000; /* Altere a cor da borda para #000000 para torná-la preta */
+    color: rgb(170, 49, 70);
+    padding: 20px;
+    border: 2px solid #000000;
     background-color: #f9f9f9;
     display: inline-block;
     box-sizing: border-box;
     width: 300px;
     background-color: #f2f2f2;
-}
+  }
+  
+  #converterForm {
+    width: 300px;
+    padding: 150px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f7f7f7;
+  }
+
+  .campo-invalido {
+    border-color: red;
+  }

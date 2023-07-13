@@ -113,7 +113,7 @@ function converterTemperatura(valor, unidadeOrigem, unidadeDestino) {
         case "Celsius":
           return valor;
         case "Fahrenheit":
-          return (valor * 9/5) + 32;
+          return (valor * 9 / 5) + 32;
         case "Kelvin":
           return valor + 273.15;
       }
@@ -121,11 +121,11 @@ function converterTemperatura(valor, unidadeOrigem, unidadeDestino) {
     case "Fahrenheit":
       switch (unidadeDestino) {
         case "Celsius":
-          return (valor - 32) * 5/9;
+          return (valor - 32) * 5 / 9;
         case "Fahrenheit":
           return valor;
         case "Kelvin":
-          return (valor + 459.67) * 5/9;
+          return (valor + 459.67) * 5 / 9;
       }
       break;
     case "Kelvin":
@@ -133,7 +133,7 @@ function converterTemperatura(valor, unidadeOrigem, unidadeDestino) {
         case "Celsius":
           return valor - 273.15;
         case "Fahrenheit":
-          return (valor * 9/5) - 459.67;
+          return (valor * 9 / 5) - 459.67;
         case "Kelvin":
           return valor;
       }
@@ -169,3 +169,22 @@ function converter() {
 
 // atualizar as opções ao carregar a página
 window.onload = atualizarUnidades;
+
+function validarFormulario() {
+  var valorInput = document.getElementById("valor");
+  var valor = parseFloat(valorInput.value);
+
+  if (isNaN(valor) || valorInput.value.trim() === "") {
+    valorInput.classList.add("campo-invalido");
+    alert("Preencha um valor numérico válido");
+    return false;
+
+  }
+  valorInput.classList.remove("campo-invalido");
+  return true;
+}
+function converter() {
+  if (!validarFormulario())
+    return;
+}
+
