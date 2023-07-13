@@ -2,38 +2,50 @@
 <html lang="pt-br">
 
 <head>
-  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Conversor</title>
 </head>
 
 <body>
-  <div class="container">
-    <h1>Conversor de Unidades</h1>
-    <form id="converterForm">
-      <label for="valor"><p> Valor:</p></label>
-      <input type="number" id="valor" required>
-      <label for="categoria"><P>Categoria:</P></label>
-      <select id="categoria" onchange="atualizarUnidades()">
-        <option value="comprimento">Comprimento</option>
-        <option value="peso">Peso</option>
-        <option value="temperatura">Temperatura</option>
-      </select>
-      <label for="unidadeOrigem"><P>Unidade de Medida de Origem:</P></label>
-      <select id="unidadeOrigem"></select>
-      <label for="unidadeDestino"><P>Unidade de Medida de Destino:</P></label>
-      <select id="unidadeDestino"></select>
-      <div class="button-container">
-        <button type="button" onclick="converter()">Converter</button>
+
+  <body>
+    <main class="container">
+      <h1>Conversor de Unidades</h1>
+      <form id="converterForm">
+        <label for="valor">
+          <p>Valor:</p>
+        </label>
+        <input type="number" id="valor" required>
+        <label for="categoria">
+          <p>Categoria:</p>
+        </label>
+        <select id="categoria" onchange="atualizarUnidades()">
+          <option value="comprimento">Comprimento</option>
+          <option value="peso">Peso</option>
+          <option value="temperatura">Temperatura</option>
+        </select>
+        <label for="unidadeOrigem">
+          <p>Unidade de Medida de Origem:</p>
+        </label>
+        <select id="unidadeOrigem"></select>
+        <label for="unidadeDestino">
+          <p>Unidade de Medida de Destino:</p>
+        </label>
+        <select id="unidadeDestino"></select>
+        <div class="button-container">
+          <button type="button" onclick="converter()">Converter</button>
+        </div>
+      </form>
+      <div>
+        <label>
+          <h3>Resultado:</h3>
+        </label>
+        <output id="resultado"></output>
       </div>
-    </form>
-    <div>
-      <label><h3>Resultado:</h3></label>
-      <output id="resultado"></output>
-    </div>
-  </div>
-  <script src="script.js"></script>
-</body>
+    </main>
+    <script src="/js/script.js"></script>
+  </body>
 
 </html>
