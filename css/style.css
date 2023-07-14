@@ -170,3 +170,12 @@ button {
   box-sizing: border-box;
   
 }
+footer {
+  text-align: left;
+  position: fixed; /*posição fixa na pg*/
+  bottom: 0;
+  width: 100%;
+  background-color:palevioletred;
+  height: 40px;
+  box-sizing: border-box; /*padding e a height estejam incluidos nas dimensoes*/
+}
